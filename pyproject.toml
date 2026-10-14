@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logscope"
+version = "1.0.0"
+description = "Analyse web-server access logs: traffic stats and scanner detection."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Raji Oluwatofarati" }]
+keywords = ["logs", "nginx", "apache", "cli", "security"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: System :: Logging",
+]
+dependencies = []
+
+[project.scripts]
+logscope = "logscope.cli:main"
+
+[tool.setuptools]
+packages = ["logscope"]
